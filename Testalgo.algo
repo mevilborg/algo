@@ -1,0 +1,30 @@
+ALGORITHM Test_chaine
+VAR
+    Ch : STRING;
+    esp,vow,x : INTEGER:=0;
+BEGIN
+    REPEAT
+        write("donnez une lettre");
+        read(Ch);
+        x:=x+1;
+        IF (Ch=" ") THEN
+            esp:=esp+1;
+        END_IF
+       SWITCH (Ch) DO
+        case "a" : vow=vow+1;break;
+        case "A" : vow=vow+1;break;
+        case "e" : vow=vow+1;break;
+        case "E": vow=vow+1;break;
+        case "i" : vow=vow+1;break;
+        case "I" : vow=vow+1;break;
+        case "o" : vow=vow+1;break;
+        case "O" : vow=vow+1;break;
+        case "u" : vow=vow+1;break;
+        case "U" : vow=vow+1;break;
+       END_SWITCH
+       
+    UNTIL (Ch=".")
+    write("The length of the sentence is :"x-1);
+    write("The number of words in the sentence is"esp);
+    write("The number of vowels in the sentence is"vow);
+END
